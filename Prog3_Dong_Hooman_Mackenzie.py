@@ -56,6 +56,20 @@ def train_model(sense1_sentences, sense2_sentences, output_model_path):
     joblib.dump(pipeline, output_model_path)  # Save the trained model to a file
     print(f"Model trained and saved to {output_model_path}")
 
+# Function to classify sentences using a trained model
+def classify_sentences(sentences, model_path):
+    """
+    Classifies sentences using a pre-trained model.
+    Args:
+        sentences (list): List of sentences to classify.
+        model_path (str): Path to the pre-trained model.
+    Returns:
+        list: Predicted labels for the sentences.
+    """
+    model = joblib.load(model_path)  # Load the trained model
+    predictions = model.predict(sentences)  # Predict the labels
+    return predictions
+
 # Word-specific model file paths
 MODEL_PATH_OVERTIME = "wsd_overtime.pkl"
 MODEL_PATH_RUBBISH = "wsd_rubbish.pkl"
