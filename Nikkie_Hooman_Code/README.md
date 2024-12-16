@@ -1,5 +1,6 @@
-Sentiment Analysis with Coreference Resolution and Topic Modeling
-Overview
+### Sentiment Analysis with Coreference Resolution and Topic Modeling
+
+## Overview
 This research focalizes on the influence of pronominal resolution (coreferential resolution) on sentiment models. The change of the text data in the treatment of the BERT and the different modeling of the topic are also investigated.
 The complete procedure consists of:
 The simple rule-based function examines the coreference resolution task.
